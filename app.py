@@ -96,5 +96,5 @@ if st.button('Predict'):
   fig, axs = plt.subplots()
   fig.set_figheight(1)
   fig.set_figwidth(1)
-  axs.imshow(X_train[target].reshape(28,28), cmap='gray') 
+  axs.imshow(arr.reshape(28,28), cmap='gray') 
   st.pyplot(fig)
