@@ -94,6 +94,7 @@ if st.button('Predict'):
   #plt.figure(figsize=(1, 1))
   #imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
   fig, axs = plt.subplots()
+  axs.axis('off')
   fig.set_figheight(1)
   fig.set_figwidth(1)
   axs.imshow(arr.reshape(28,28), cmap='gray') 
