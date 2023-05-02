@@ -93,3 +93,4 @@ if st.button('Predict'):
   st.success(labels[kee])
   plt.figure(figsize=(1, 1))
   imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
+  st.pyplot(imgplot)
