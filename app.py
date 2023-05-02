@@ -91,6 +91,10 @@ if st.button('Predict'):
   kee=model.predict(arr).argmax()
   labels = ['T-shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
   st.success(labels[kee])
-  plt.figure(figsize=(1, 1))
-  imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
-  st.pyplot(imgplot)
+  #plt.figure(figsize=(1, 1))
+  #imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
+  fig, axs = plt.subplots()
+  fig.set_figheight(1)
+  fig.set_figwidth(1)
+  axs.imshow(X_train[target].reshape(28,28), cmap='gray') 
+  st.pyplot(fig)
