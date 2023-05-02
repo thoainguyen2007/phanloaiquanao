@@ -1,6 +1,8 @@
 import streamlit as st
 from tensorflow import keras
 import numpy as np
+import matplotlib.pyplot as plt
+
 model= keras.models.load_model('something.hdf5')
 
 st.header('Revenue Prediction')
@@ -89,7 +91,5 @@ if st.button('Predict'):
   kee=model.predict(arr).argmax()
   labels = ['T-shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
   st.success(labels[kee])
-
-
-#plt.figure(figsize=(1, 1))
-#imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
+  plt.figure(figsize=(1, 1))
+  imgplot = plt.imshow(arr.reshape(28,28), cmap='gray')
